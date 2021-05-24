@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <div class="container">
+        <h1>ALBICLA</h1>
+        
+        <h2>Witaj podróżniku</h2>
+        {% if error %}
+        <p> {{ error }}</p>
+        <p> Czy chcesz sie <a href="/register" style="margin-left: 20px;">zarejestrować</a>?</p>
+        {% endif %}
+        <form action="/user_page" method="POST">
+            login <input type="text" name="login">
+            password <input type="text" name="password">
+            <input value="zaloguj" type="submit">
+        </form>
+        <a href="/register" style="margin-left: 20px;"><button >zarejestruj</button></a>
+    </div>
+
+   </body>
+</html>
